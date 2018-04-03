@@ -1,0 +1,14 @@
+- name: Add {{ main_user }} user with sudo rights.
+  user: 
+    name: {{ main_user }}
+    group: {{ main_user }}
+    shell: {{ users_shell }}
+    password: {{ main_user_password }}
+    groups: sudo
+    append: yes
+
+- name: Add authorized keys for {{ main_user }} user. 
+  authorized_key: 
+    user: {{ main_user }}
+    key: {{ lookup('file', item) }}
+  with_items: main_user_public_keys
