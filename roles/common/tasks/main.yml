@@ -6,7 +6,6 @@
     - fail2ban
     - iptables
     - iptables-persistent
-    - libpam-google-authenticator
     - logwatch
     - sudo
 
