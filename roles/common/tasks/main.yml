@@ -24,6 +24,11 @@
     key: "{{ lookup('file', item) }}"
   with_items: "{{ main_user_public_keys }}"
 
+- name: Initialize google authenticator
+  shell: google-authenticator -t -d -f -r 3 -R 30 -W
+  register: auth_output
+
+- debug: msg="{{ auth_output }}"  
 
 
 
