@@ -1,7 +1,14 @@
-- name: Install sudo 
+- name: Install base backages
   apt: 
-    name: sudo 
+    name: "{{ item }}"
     state: present
+  with_items:
+    - fail2ban
+    - iptables
+    - iptables-persistent
+    - libpam-google-authenticator
+    - logwatch
+    - sudo
 
 - name: Add {{ main_user }} user with sudo rights.
   user: 
