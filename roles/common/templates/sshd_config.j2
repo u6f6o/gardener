@@ -1,0 +1,19 @@
+Protocol 2 
+AllowUsers {{ main_user }}
+
+HostKey /etc/ssh/ssh_host_ed25519_key
+HostKey /etc/ssh/ssh_host_rsa_key
+
+PermitRootLogin no
+PermitEmptyPasswords no
+HostbasedAuthentication no
+ChallengeResponseAuthentication no
+KerberosAuthentication no
+PasswordAuthentication no
+GSSAPIAuthentication no
+X11Forwarding no
+IgnoreRhosts yes
+UsePAM no
+
+AuthenticationMethods publickey
+PubkeyAuthentication yes
