@@ -22,7 +22,7 @@ Following packages will be installed and configured:
   - Only allow specified user to login 
 - fail2ban 
 - logwatch 
-- iptables/ufw
+- ufw
 - nginx
   - provide a static webiste 
   - allow access via https  
