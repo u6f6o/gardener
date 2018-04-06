@@ -46,5 +46,6 @@
     rule: allow
     port: ssh
     proto: tcp
+  notify: Restart ufw
 
-
+  
