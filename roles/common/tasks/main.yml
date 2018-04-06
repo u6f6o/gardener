@@ -34,7 +34,7 @@
 
 - name: Create sshd configuration file
   template:
-    src: sshd_config.j2
+    src: ssh/sshd_config.j2
     dest: /etc/ssh/sshd_config
     owner: root
     group: root
@@ -48,4 +48,11 @@
     proto: tcp
   notify: Restart ufw
 
-  
+- name: Create fail2ban jail.local file  
+  template: 
+    src: fail2ban/jail.local.j2
+    dest: /etc/fail2ban/jail.local
+    owner: root
+    group: root
+    mode: 0644
+  notify: Restart fail2ban
