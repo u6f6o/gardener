@@ -2,4 +2,4 @@ main_user: deploy
 main_user_password: foobar123
 main_user_email: deploy@u6f6o.com 
 main_user_public_keys: 
-  - /Users/u6f6o/.ssh/id_rsa.pub 
+  - ~/.ssh/id_rsa.pub 
