@@ -14,10 +14,7 @@ Following packages will be installed and configured:
   - authorize public ssh keys 
   - added to sudoers
 - sshd 
-  - Multi-factor authentication 
-    - publickey (SSH key)
-    - password publickey (password)
-    - keyboard-interactive (verification code)
+  - publickey (SSH key)
   - Disable root login 
   - Only allow specified user to login 
 - fail2ban 
